@@ -1,8 +1,12 @@
 import PouchDB from 'pouchdb';
 import { Adapter } from 'ember-pouch';
+import pouchDebugPlugin from 'pouchdb-debug';
 
-PouchDB.debug.enable('*');
+PouchDB.plugin(pouchDebugPlugin);
 
 export default Adapter.extend({
-  db: new PouchDB('example')
+  init() {
+    this._super(...arguments);
+    this.set('db', new PouchDB('example'));
+  }
 });
