@@ -4,7 +4,7 @@ import pouchInMemoryPlugin from 'pouchdb-adapter-memory';
 import pouchDebugPlugin from 'pouchdb-debug';
 
 const enablePouchDBDebug = true;
-const useInMemoryAdapter = true;
+const useInMemoryAdapter = false;
 
 export default Adapter.extend({
   init() {

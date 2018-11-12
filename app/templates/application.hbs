@@ -9,4 +9,6 @@ Name: {{input value=name}} <button onclick={{action "addPerson" name}}>Create</b
 <br>
 <button onclick={{action "deleteAllPeople"}}>Delete all</button> (doesn't work)
 <br>
-<button onclick={{action "destroyAllPeople"}}>Destroy all</button> (causes Error)
+<button onclick={{action "saveAllPeople"}}>Save all</button> (causes error if one or more records marked for deletion)
+<br>
+<button onclick={{action "destroyAllPeople"}}>Destroy all</button> (causes error)
