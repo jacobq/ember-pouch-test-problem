@@ -1,9 +1,12 @@
-People:
+Try adding some entries to the list then deleting them.
 <ul>
   {{#each model.people as |person|}}
     <li>{{person.name}}</li>
   {{/each}}
 </ul>
 
-Name: {{input value=name}} <button onclick={{action "addPerson" name}}>Add</button>
-
+Name: {{input value=name}} <button onclick={{action "addPerson" name}}>Create</button>
+<br>
+<button onclick={{action "deleteAllPeople"}}>Delete all</button> (doesn't work)
+<br>
+<button onclick={{action "destroyAllPeople"}}>Destroy all</button> (causes Error)

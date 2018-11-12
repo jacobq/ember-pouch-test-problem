@@ -6,6 +6,16 @@ export default Controller.extend({
       this.get('store').createRecord('person', {
         name
       }).save();
+    },
+    deleteAllPeople(name) {
+      this.get('store').findAll('person').then(people => {
+        people.forEach(person => person.deleteRecord());
+      });
+    },
+    destroyAllPeople(name) {
+      this.get('store').findAll('person').then(people => {
+        people.forEach(person => person.destroyRecord());
+      });
     }
   }
 });
