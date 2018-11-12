@@ -5,14 +5,14 @@ This simple example demonstrates the problem.
 
 Steps to reproduce:
 
-0. git clone https://github.com/jacobq/ember-pouch-test-problem.git
-1. cd ember-pouch-test-problem
-2. `yarn`
-3. ember s
-4. Open web browser and navigate to http://localhost:4200/
-5. Enter "foo" (or anything really) into the "Name" input element and click "Create"
-6. Click "Destroy all" (or "Delete all" then "Save all")
-7. Open developer tools and observer error in console:
+   0. `git clone https://github.com/jacobq/ember-pouch-test-problem.git`
+   1. `cd ember-pouch-test-problem`
+   2. `yarn`
+   3. `ember s`
+   4. Open web browser and navigate to http://localhost:4200/
+   5. Enter "foo" (or anything really) into the "Name" input element and click "Create"
+   6. Click "Destroy all" (or "Delete all" then "Save all")
+   7. Open developer tools and observer error in console:
 
 ```text
 Error: Attempted to handle event `pushedData` on <person:990E50DB-5036-B428-86ED-011A3F74EAEA> while in state root.deleted.inFlight. 
