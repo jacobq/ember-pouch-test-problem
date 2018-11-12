@@ -1,5 +1,9 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+People:
+<ul>
+  {{#each model.people as |person|}}
+    <li>{{person.name}}</li>
+  {{/each}}
+</ul>
 
-{{outlet}}
+Name: {{input value=name}} <button onclick={{action "addPerson" name}}>Add</button>
+
