@@ -1,9 +1,9 @@
 import PouchDB from 'pouchdb';
 import { Adapter } from 'ember-pouch';
-import pouchInMemoryPlugin from 'pouchdb-adapter-memory';
-import pouchDebugPlugin from 'pouchdb-debug';
+//import pouchInMemoryPlugin from 'pouchdb-adapter-memory';
+//import pouchDebugPlugin from 'pouchdb-debug';
 
-const enablePouchDBDebug = true;
+const enablePouchDBDebug = false;
 const useInMemoryAdapter = false;
 
 export default Adapter.extend({
@@ -12,10 +12,10 @@ export default Adapter.extend({
 
     const options = {};
     if (enablePouchDBDebug) {
-      PouchDB.plugin(pouchDebugPlugin);
+      //PouchDB.plugin(pouchDebugPlugin);
     }
     if (useInMemoryAdapter) {
-      PouchDB.plugin(pouchInMemoryPlugin);
+      //PouchDB.plugin(pouchInMemoryPlugin);
       options.adapter = 'memory';
     }
 
